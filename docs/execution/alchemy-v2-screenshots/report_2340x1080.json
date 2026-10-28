@@ -1,0 +1,26 @@
+{
+    "alias": "layout-2340-1793175638",
+    "started": "2026-10-28T16:20:42",
+    "resolution": "2340x1080",
+    "pass": true,
+    "steps": [
+        {
+            "index": 1,
+            "name": "登入",
+            "pass": true,
+            "note": "",
+            "seconds": 0.4539186954498291,
+            "shot": "2340x1080_01_furnace.png"
+        },
+        {
+            "index": 2,
+            "name": "各解析度版面截圖",
+            "pass": true,
+            "note": "",
+            "seconds": 13.905957221984864,
+            "shot": ""
+        }
+    ],
+    "inventory": [],
+    "result": ""
+}

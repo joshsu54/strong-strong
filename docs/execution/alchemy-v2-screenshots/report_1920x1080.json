@@ -1,0 +1,177 @@
+{
+    "alias": "playtest-1793175527",
+    "started": "2026-10-28T16:18:50",
+    "resolution": "1920x1080",
+    "pass": true,
+    "steps": [
+        {
+            "index": 1,
+            "name": "登入本機伺服器並進入丹房（第三人稱）",
+            "pass": true,
+            "note": "Saved · revision 0",
+            "seconds": 0.45919251441955569,
+            "shot": "1920x1080_01_cabinet_closeup.png"
+        },
+        {
+            "index": 2,
+            "name": "藥櫃特寫：向阿禾購得藥材（測試角色前置，靈石購買）",
+            "pass": true,
+            "note": "青靈草 4・淨水蓮 2・採集 True",
+            "seconds": 4.509909152984619,
+            "shot": ""
+        },
+        {
+            "index": 3,
+            "name": "辨識兩味藥材（丹方仍為？）",
+            "pass": true,
+            "note": "",
+            "seconds": 4.560981273651123,
+            "shot": "1920x1080_03_identified.png"
+        },
+        {
+            "index": 4,
+            "name": "選取份量 2：1 並取出",
+            "pass": true,
+            "note": "2:1",
+            "seconds": 4.642032146453857,
+            "shot": ""
+        },
+        {
+            "index": 5,
+            "name": "取消特寫回到探索鏡頭",
+            "pass": true,
+            "note": "",
+            "seconds": 5.200490951538086,
+            "shot": "1920x1080_05_fuelbox.png"
+        },
+        {
+            "index": 6,
+            "name": "柴箱取柴 6 根，開始煉製（伺服器扣除藥材與柴）",
+            "pass": true,
+            "note": "剩青靈草 2・松柴 4",
+            "seconds": 7.744302272796631,
+            "shot": "1920x1080_06_scroll_manuals.png"
+        },
+        {
+            "index": 7,
+            "name": "竹簡：丹道推演與丹方錄（未知丹方顯示？）",
+            "pass": true,
+            "note": "",
+            "seconds": 10.19253921508789,
+            "shot": "1920x1080_07_table_topdown.png"
+        },
+        {
+            "index": 8,
+            "name": "工作台俯視：青靈草入石臼，研磨完成",
+            "pass": true,
+            "note": "",
+            "seconds": 17.100801467895509,
+            "shot": "1920x1080_08_drying.png"
+        },
+        {
+            "index": 9,
+            "name": "淨水蓮陰乾後取出",
+            "pass": true,
+            "note": "陰乾",
+            "seconds": 24.104740142822267,
+            "shot": ""
+        },
+        {
+            "index": 10,
+            "name": "分料盤君臣配伍",
+            "pass": true,
+            "note": "君 qingling-herb・臣 water-lotus",
+            "seconds": 24.12588119506836,
+            "shot": "1920x1080_10_water_jar.png"
+        },
+        {
+            "index": 11,
+            "name": "陶水缸舀水 2 瓢",
+            "pass": true,
+            "note": "",
+            "seconds": 37.920379638671878,
+            "shot": "1920x1080_11_brew_shoulder.png"
+        },
+        {
+            "index": 12,
+            "name": "過肩：開蓋注水、依序投料（伺服器記錄已投料）",
+            "pass": true,
+            "note": "session.charged=True",
+            "seconds": 40.659446716308597,
+            "shot": "1920x1080_12_furnace_heating.png"
+        },
+        {
+            "index": 13,
+            "name": "合蓋添柴點火、以排煙檔控火完成兩段火候",
+            "pass": true,
+            "note": "峰值 58.4・在火候內 22.0/25.3 息・用柴 3",
+            "seconds": 71.2099380493164,
+            "shot": "1920x1080_13_reveal_cinematic.png"
+        },
+        {
+            "index": 14,
+            "name": "丹香起後收丹、開爐演出、伺服器判定品質",
+            "pass": true,
+            "note": "極品 99 分・首次領悟 True・熟練 +35",
+            "seconds": 75.00157928466797,
+            "shot": "1920x1080_14_result.png"
+        },
+        {
+            "index": 15,
+            "name": "以 B10 蠟封瓶裝瓶領取入包",
+            "pass": true,
+            "note": "回春丹 1",
+            "seconds": 75.89324188232422,
+            "shot": "1920x1080_15_bottled.png"
+        },
+        {
+            "index": 16,
+            "name": "重複按領取不會重複發放",
+            "pass": true,
+            "note": "",
+            "seconds": 81.96024322509766,
+            "shot": "1920x1080_16_scroll_recipe_unlocked.png"
+        },
+        {
+            "index": 17,
+            "name": "丹方錄記下配比、處理、順序、火候與最佳品質",
+            "pass": true,
+            "note": "配比　淨水蓮1：青靈草2 / 處理　淨水蓮陰乾、青靈草研末 / 順序　注水 → 淨水蓮 → 青靈草 / 注水　2 瓢 / 火候　文火溫藥 22–40，中火融藥 45–62 / 收丹　丹香起後 2–6 息 / 最佳　極品（99 分），共煉 1 爐",
+            "seconds": 84.01055145263672,
+            "shot": ""
+        },
+        {
+            "index": 18,
+            "name": "重新登入後丹方與熟練仍在",
+            "pass": true,
+            "note": "Lv2 xp 35",
+            "seconds": 84.53536987304688,
+            "shot": "1920x1080_18_quick_craft.png"
+        },
+        {
+            "index": 19,
+            "name": "已掌握丹方快速煉製（扣料扣柴，得凡品或良品）",
+            "pass": true,
+            "note": "青靈草 1・淨水蓮 0・松柴 3",
+            "seconds": 87.71903991699219,
+            "shot": ""
+        },
+        {
+            "index": 20,
+            "name": "減少鏡頭運動：直接切換不播放過渡",
+            "pass": true,
+            "note": "",
+            "seconds": 90.218505859375,
+            "shot": ""
+        }
+    ],
+    "inventory": [
+        "qingling-seed×3（potency 100）",
+        "lotus-seed×2（potency 100）",
+        "qingling-herb×1（potency 100）",
+        "pine-firewood×3（potency 100）",
+        "huichun-pill×1（potency 150）",
+        "huichun-pill×1（potency 80）"
+    ],
+    "result": "{\"success\":true,\"bound\":false,\"firstUnlock\":true,\"grade\":\"ji\",\"label\":\"極品\",\"output\":\"huichun-pill\",\"parts\":{\"ratio\":1.0,\"prep\":1.0,\"fire\":0.8475000262260437,\"condense\":1.0},\"reasons\":[\"火候不穩：3.4 息不在所需火候內。\"],\"score\":99,\"quantity\":1,\"potency\":150,\"residue\":0,\"xpGain\":35,\"level\":2,\"fuelUsed\":3,\"fuelReturned\":3}"
+}

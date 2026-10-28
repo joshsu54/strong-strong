@@ -1,0 +1,26 @@
+{
+    "alias": "layout-1280-1793175621",
+    "started": "2026-10-28T16:20:24",
+    "resolution": "1280x720",
+    "pass": true,
+    "steps": [
+        {
+            "index": 1,
+            "name": "登入",
+            "pass": true,
+            "note": "",
+            "seconds": 0.4548337459564209,
+            "shot": "1280x720_01_furnace.png"
+        },
+        {
+            "index": 2,
+            "name": "各解析度版面截圖",
+            "pass": true,
+            "note": "",
+            "seconds": 13.873088836669922,
+            "shot": ""
+        }
+    ],
+    "inventory": [],
+    "result": ""
+}

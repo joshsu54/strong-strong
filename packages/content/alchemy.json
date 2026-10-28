@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "note": "Alchemy V2 rules. Herbs are the two real Qingxi herbs; pills, firewood and residue are new items registered in world.json. Every rule is deterministic: no random rolls.",
+  "fuelItem": "pine-firewood",
+  "residueItem": "pill-residue",
+  "maxHerbEach": 4,
+  "maxFuel": 12,
+  "herbs": [
+    { "id": "qingling-herb", "label": "青靈草", "nature": "木性溫和，葉脈含青光", "use": "固本生肌，為回春之君", "identifyHint": "葉背有細銀紋，揉之微涼" },
+    { "id": "water-lotus", "label": "淨水蓮", "nature": "水性清寒，莖中空", "use": "滌濁引氣，為聚氣之君", "identifyHint": "花瓣半透，浸水不沉" }
+  ],
+  "preps": [
+    { "id": "raw", "label": "生用" },
+    { "id": "ground", "label": "研末" },
+    { "id": "dried", "label": "陰乾" },
+    { "id": "scorched", "label": "焦乾（晾過頭）" }
+  ],
+  "drying": { "minSeconds": 8, "maxSeconds": 24, "woodRootBonusSeconds": 6 },
+  "grindStrokes": 12,
+  "recipes": [
+    {
+      "id": "huichun",
+      "output": "huichun-pill",
+      "label": "回春丹",
+      "effect": "調養氣血，服用後體魄 +8（依品級）",
+      "ratio": { "qingling-herb": 2, "water-lotus": 1 },
+      "prep": { "qingling-herb": "ground", "water-lotus": "dried" },
+      "order": ["water", "water-lotus", "qingling-herb"],
+      "water": 2,
+      "phases": [
+        { "label": "文火溫藥", "fire": "weak", "low": 22, "high": 40, "seconds": 10 },
+        { "label": "中火融藥", "fire": "medium", "low": 45, "high": 62, "seconds": 12 }
+      ],
+      "condense": { "best": [2, 6], "zeroAt": [-1, 14], "overcookAt": 22 },
+      "quick": { "fuel": 4 }
+    },
+    {
+      "id": "juqi",
+      "output": "juqi-pill",
+      "label": "聚氣丹",
+      "effect": "凝聚靈氣，服用後靈氣 +15（依品級）",
+      "ratio": { "qingling-herb": 1, "water-lotus": 2 },
+      "prep": { "qingling-herb": "dried", "water-lotus": "ground" },
+      "order": ["water", "qingling-herb", "water-lotus"],
+      "water": 1,
+      "phases": [
+        { "label": "中火化藥", "fire": "medium", "low": 45, "high": 62, "seconds": 10 },
+        { "label": "武火凝煉", "fire": "strong", "low": 68, "high": 85, "seconds": 10 }
+      ],
+      "condense": { "best": [1, 4], "zeroAt": [-1, 11], "overcookAt": 18 },
+      "quick": { "fuel": 5 }
+    }
+  ],
+  "unmatched": {
+    "label": "藥性互抵",
+    "phases": [ { "label": "中火試煉", "fire": "medium", "low": 45, "high": 62, "seconds": 12 } ],
+    "condense": { "best": [2, 6], "zeroAt": [-1, 14], "overcookAt": 22 }
+  },
+  "fire": {
+    "step": 0.1,
+    "ambient": 15,
+    "piecePower": 4.3,
+    "ventPowerBase": 0.45,
+    "ventPowerScale": 0.55,
+    "lossBase": 0.12,
+    "lossVent": 0.03,
+    "lossLidOpen": 0.25,
+    "burnSeconds": 20,
+    "ventBurnBase": 0.7,
+    "ventBurnScale": 0.6,
+    "maxBurning": 6,
+    "scorchLine": 95,
+    "scorchLimitSeconds": 4,
+    "stabilityFloor": 0.4,
+    "stabilityFull": 0.95,
+    "maxLogSeconds": 900
+  },
+  "weights": { "ratio": 25, "prep": 25, "fire": 35, "condense": 15 },
+  "prepParts": { "herbs": 0.6, "order": 0.25, "water": 0.15 },
+  "grades": [
+    { "id": "fan", "label": "凡品", "min": 45, "potency": 80 },
+    { "id": "liang", "label": "良品", "min": 65, "potency": 100 },
+    { "id": "shang", "label": "上品", "min": 80, "potency": 120 },
+    { "id": "ji", "label": "極品", "min": 92, "potency": 150 }
+  ],
+  "proficiency": {
+    "maxLevel": 100,
+    "baseNeed": 20,
+    "needPerLevel": 6,
+    "fail": 4,
+    "success": 10,
+    "firstUnlock": 20,
+    "firstPerfect": 5,
+    "quick": 2,
+    "diminishFloor": 0.25,
+    "diminishPerLevel": 0.0075
+  },
+  "mastery": { "minGrade": "liang", "quickGoodLevel": 30 },
+  "talents": {
+    "mortal":   { "band": 0, "xp": 0.9 },
+    "ordinary": { "band": 1, "xp": 1.0 },
+    "gifted":   { "band": 2, "xp": 1.1 },
+    "prodigy":  { "band": 3, "xp": 1.2 },
+    "chosen":   { "band": 4, "xp": 1.3 }
+  },
+  "roots": {
+    "火": { "label": "火靈根：控火", "band": 3, "scorchSeconds": 2 },
+    "木": { "label": "木靈根：辨識與處理", "dryBonus": true, "prepFloor": 0.25 },
+    "水": { "label": "水靈根：凝丹", "condenseSeconds": 2 },
+    "土": { "label": "土靈根：融合容錯", "ratioTolerance": 1.3, "orderForgive": 0.5 },
+    "金": { "label": "金靈根：成丹品質", "scoreBonus": 4 }
+  },
+  "sectPaths": {
+    "alchemy": { "label": "丹霞谷丹道", "band": 2, "condenseSeconds": 1 },
+    "spell":   { "label": "太玄道院法訣控火", "band": 1 },
+    "body":    { "label": "玄岳宗耐火體魄", "scorchSeconds": 1.5 }
+  },
+  "manuals": [
+    { "tier": 1, "label": "丹經・殘篇", "requirement": "入門即得",
+      "hints": {
+        "huichun": ["青靈草多於淨水蓮，藥性偏溫。", "火宜先柔後穩，不可一味猛燒。"],
+        "juqi": ["淨水蓮多於青靈草，藥性偏清。", "火候由中而旺，收丹要快。"]
+      } },
+    { "tier": 2, "label": "丹經・中卷", "requirement": "煉丹熟練 Lv10，或已掌握秘笈「靈植辨識」", "level": 10, "technique": "herb-lore",
+      "hints": {
+        "huichun": ["配比約二比一。", "青靈草宜研末，淨水蓮宜陰乾。", "先文火，再中火。"],
+        "juqi": ["配比約一比二。", "青靈草宜陰乾，淨水蓮宜研末。", "先中火，再武火。"]
+      } },
+    { "tier": 3, "label": "丹經・全卷", "requirement": "煉丹熟練 Lv30", "level": 30,
+      "hints": {
+        "huichun": ["先注水二瓢，再投淨水蓮，後投青靈草。", "文火約 22–40，中火約 45–62。", "丹香起後約 2–6 息收丹。"],
+        "juqi": ["先注水一瓢，再投青靈草，後投淨水蓮。", "中火約 45–62，武火約 68–85。", "丹香起後約 1–4 息收丹。"]
+      } }
+  ]
+}
